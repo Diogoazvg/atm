@@ -1,0 +1,65 @@
+AllCops:
+  StyleGuideBaseURL: https://rubystyle.guide
+  Exclude:
+    - "**/*.lock"
+    - "**/db/**/*"
+    - "**/bin/**/*"
+    - "**/dummy/**/*"
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  VersionAdded: "0.25"
+  VersionChanged: "0.81"
+  AllowedMethods: []
+  AllowedPatterns: []
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  VersionAdded: "0.25"
+  VersionChanged: "0.81"
+  AllowedMethods: []
+  AllowedPatterns: []
+  Max: 10
+
+Style/Documentation:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/AbcSize:
+  Reference:
+    - http://c2.com/cgi/wiki?AbcMetric
+    - https://en.wikipedia.org/wiki/ABC_Software_Metric
+  Enabled: true
+  VersionAdded: "0.27"
+  VersionChanged: "1.5"
+  AllowedMethods: []
+  AllowedPatterns: []
+  CountRepeatedAttributes: true
+  Max: 30
+
+Metrics/MethodLength:
+  StyleGuide: "#short-methods"
+  Enabled: true
+  VersionAdded: "0.25"
+  VersionChanged: "1.5"
+  CountComments: false # count full line comments?
+  Max: 25
+  CountAsOne: []
+  AllowedMethods: []
+  AllowedPatterns: []
+
+Metrics/BlockLength:
+  Enabled: true
+  VersionAdded: "0.44"
+  VersionChanged: "1.5"
+  CountComments: false # count full line comments?
+  Max: 200
+  CountAsOne: []
+  AllowedMethods:
+    - refine
+  AllowedPatterns: []
+  Exclude:
+    - "**/*.gemspec"
